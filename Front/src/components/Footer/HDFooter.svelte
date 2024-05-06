@@ -20,7 +20,7 @@
         </div>
         <div class="footer_item col-start-3">
             <img src="images/footer-line.svg" alt="">
-            <div class="footer_item-components">
+            <div id="contact1" class="footer_item-components">
                 <img style="width: 87px; height: 85px;" src="images/footer_image-tel.svg" alt="">
                 <span style="font-size: 24px;">CALL</span>
                 <span style="font-size: 24px; color: white;">+7 912 345-67-89</span>
