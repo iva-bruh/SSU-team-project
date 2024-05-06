@@ -1,4 +1,4 @@
-<button class="AddButton" on:click>
+<button class={`AddButton ${$$props.class}`} on:click>
     <slot />
 </button>
 

@@ -5,6 +5,5 @@
 
 body{
     font-family: "JejuMyeongjo";
-    background: url(/background.svg);
-    background-size: cover;
+    background: url(/background.svg) repeat-y center;
 }
