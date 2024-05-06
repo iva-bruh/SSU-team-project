@@ -1,5 +1,5 @@
 <script>
-    import ButtonPink from ".//ButtonPink.svelte";
+	import ButtonPink from "../commons/ButtonPink.svelte";
 </script>
 
 <div class="container mx-auto grid grid-cols-3">
