@@ -9,7 +9,7 @@
             <span style="font-size: 24px;">В нашем приюте Вы можете взять любого питомца, который нуждается в любви и заботе</span>
         </div>
         <div style="margin-top: 54px;">
-            <a href="/animals" ><ButtonPink /></a>
+            <a href="/animals"><ButtonPink /></a>
         </div>
     </div>
 
