@@ -1,5 +1,5 @@
 <div class="container mx-auto grid grid-cols-12">
-    <div class="care_title col-start-1 col-end-4">Уход за кошачьими</div>
+    <div class="care_title col-start-1 col-end-4 font-bold">Уход за кошачьими</div>
     <div class="col-start-1 col-end-7"> 
         <img style="width: 525px; height: 525px;" src="images/care_image-cat.png" alt="">
     </div>

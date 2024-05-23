@@ -1,34 +1,28 @@
-<script lang="ts">
+<script>
     import {ApiModule} from '../../lib/api'
     import AddButton from '../../components/commons/AddButton.svelte';
     import {isAuth} from '../../stores/auth'
 	import IconAnimal from '../../components/Animals/IconAnimal.svelte';
+    import { invalidate } from '$app/navigation';
 
-    let items = loadData();
+    export let data;
+	$: animals = data.animals;
 
-    function loadData(){
-        return ApiModule.getAnimals();
-    }
-
-    async function createAnimal(event){
-        console.log(event)
+    async function createAnimal(){
         await ApiModule.createAnimal({
-            image: null,
+            image: '/images/noimage.png',
             name: null
         });
-        items = loadData();
+        invalidate('refresh');
     }
 
     async function deleteAnimal(event){
         await ApiModule.deleteAnimal(event.detail.id);
-        items = loadData();
+        invalidate('refresh');
     }
 </script>
 
 <div class="container mx-auto">
-    {#await items}
-        Loading...
-    {:then value}
     <div class="relative">
         <h1 class="text-center text-[32px] font-bold my-12">Выберите друга!</h1>
         {#if $isAuth}
@@ -36,9 +30,8 @@
         {/if}
     </div>
     <div>
-        {#each value as item}
+        {#each animals as item}
         <IconAnimal id={item.id} image={item.image} on:delete={deleteAnimal}/>
         {/each}
     </div>
-    {/await}
 </div>

@@ -13,8 +13,8 @@ app.get('/animals', async (req, res) => {
 
 app.post('/animals', async (req, res) => {
     console.log(req.body)
-    // const result = await createAnimal(req.body)
-    // res.send(result.rows)
+    const result = await createAnimal(req.body)
+    res.send(result.rows)
 })
 
 app.delete('/animals/:id', async (req, res) => {

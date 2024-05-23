@@ -1,5 +1,5 @@
 <div class="container mx-auto grid grid-cols-12">
-    <div class="care_title col-start-10 col-end-13">Уход за птицами</div>
+    <div class="care_title col-start-10 col-end-13 font-bold">Уход за птицами</div>
     <div class="care_text col-start-1 col-end-7">
         <span>1. Правильное питание: 
     - Обеспечьте птице разнообразное и сбалансированное питание, которое включает в себя комбинацию птичьего корма, свежих фруктов, овощей и специальных добавок.

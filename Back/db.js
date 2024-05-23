@@ -12,8 +12,8 @@ await client.connect()
 
 export async function createAnimal({image, type, name, sex, age, breed, story, about}){
     return await client.query(`
-    INSERT INTO animals (type, name, sex, age, breed, story, about)
-    VALUES ($1, $2, $3, $4, $5, $6, $7)
+    INSERT INTO animals (image, type, name, sex, age, breed, story, about)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
     RETURNING *
     `, [image, type, name, sex, age, breed, story, about])
 }

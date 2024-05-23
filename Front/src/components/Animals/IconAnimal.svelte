@@ -1,6 +1,6 @@
 <script>
 	export let id;
-	export const image = 'images/noimage.png';
+	export let image;
 
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
@@ -11,7 +11,17 @@
 </script>
 <div>
 	<img style="border-radius: 10px;" src={image} alt="">
-	<span style="font-size: 32px;">00{id}</span>
+	<span style="font-size: 32px;">
+		{#if id < 10}
+		00{id}	
+		{/if}
+		{#if id >= 10}
+		0{id}
+		{/if}
+		{#if id >=100}
+			{id}
+		{/if}
+	</span>
 </div>
 {#if $isAuth}
     <ChangeButton>Ред.</ChangeButton>
