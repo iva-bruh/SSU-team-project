@@ -1,5 +1,6 @@
 <script>
     import BirButton from "../commons/BirButton.svelte";
+	import ButtonPink from "../commons/ButtonPink.svelte";
 </script>
 
 <div class="container mx-auto grid grid-cols-12">
@@ -8,7 +9,7 @@
     </div> 
     
     <div class="cont col-start-3 col-end-4">
-        <BirButton>Контакты</BirButton>
+        <a href="#contact1"><BirButton>Контакты</BirButton></a>
     </div>
     
     <div class="col-start-8 col-end-13">
