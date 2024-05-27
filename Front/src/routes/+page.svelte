@@ -2,6 +2,7 @@
 <script>
     import Slog from  "../components/1page/Slog.svelte";
     import Menu from "../components/1page/Menu.svelte";
+    import Help from "../components/1page/Help.svelte";
 </script>
 
 
@@ -10,6 +11,7 @@
     <b style="font-size: 32px;">В нашем приюте Вы можете</b>
 </div>
 <Menu />
+<Help/>
 
 <style>
     .pom{
@@ -17,3 +19,4 @@
         width: 635px; 
     }
 </style>
+

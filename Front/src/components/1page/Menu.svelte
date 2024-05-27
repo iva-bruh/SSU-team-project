@@ -43,7 +43,7 @@
     </div>
 
     <div class="kib col-start-9 col-end-13" style="margin-top: 35px;">
-        <img style="width: 100%; height: 415px; " src="images/хомяк глав.png" alt="">
+        <img style="width: 100%; height: 415px;" src="images/хомяк глав.png" alt="">
     </div>
 
 </div>
