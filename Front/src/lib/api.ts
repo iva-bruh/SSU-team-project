@@ -27,9 +27,16 @@ async function deleteAnimal(id: number){
     return await axios.delete(`${baseURL}/animals/${id}`)
 }
 
+async function getAnimalByID(id: number): Promise<Array<ItemAnimal>>{
+    const res = await axios.get(`${baseURL}/animals/${id}`)
+    return res.data
+}
+
+    
 
 export const ApiModule = {
     getAnimals,
     createAnimal,
-    deleteAnimal
+    deleteAnimal,
+    getAnimalByID
 }

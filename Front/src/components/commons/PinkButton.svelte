@@ -1,5 +1,4 @@
-
-<button class="button arrow"></button>
+<button class="button arrow" on:click></button>
 
 <style>
     .button{
@@ -7,14 +6,15 @@
     width: 60px;
     height: 60px;
     border-radius: 50%; 
-    }
-    .arrow {
+}
+.arrow {
     position: relative;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    }
-    .arrow:after {
+    transform: rotate(180deg);
+}
+.arrow:after {
     position: absolute;
     top: 24.5px;
     right: 17px;
@@ -25,8 +25,8 @@
     border-left: 3px solid #ffffff;
     border-bottom: 3px solid #ffffff;
     transform: rotate(225deg);
-    }
-    .arrow:before {
+}
+.arrow:before {
     content: '';
     position: absolute;
     width: 25px;
