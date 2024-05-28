@@ -1,6 +1,5 @@
 <script>
     import BirButton from "../commons/BirButton.svelte";
-	import ButtonPink from "../commons/ButtonPink.svelte";
 </script>
 
 <div class="container mx-auto grid grid-cols-12">
