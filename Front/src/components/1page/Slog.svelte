@@ -1,6 +1,5 @@
 <script>
     import BirButton from "../commons/BirButton.svelte";
-	import ButtonPink from "../commons/ButtonPink.svelte";
 </script>
 
 <div class="container mx-auto grid grid-cols-12">
@@ -16,8 +15,6 @@
         <img style="height: 525px; margin-top:-311px;" src="images/собака глав.png" alt="">
     </div>
 </div>
-
-
 
 <style>
     .slong{

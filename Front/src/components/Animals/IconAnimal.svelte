@@ -11,6 +11,7 @@
 
 	let cardId = id;
 </script>
+
 <div>
 	<img style="border-radius: 10px;" src={image} alt="">
 	<a href="/cards/{cardId}"><span style="font-size: 32px;">
