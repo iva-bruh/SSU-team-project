@@ -11,7 +11,7 @@
     async function createAnimal(){
         await ApiModule.createAnimal({
             image: '/images/noimage.png',
-            name: "name:"
+            name: "noname"
         });
         invalidate('refresh');
     }
@@ -29,7 +29,7 @@
         <AddButton on:click={createAnimal} class="absolute right-0 top-[50%] translate-y-[-50%]">Добавить</AddButton>
         {/if}
     </div>
-    <div>
+    <div class="grid grid-cols-2">
         {#each animals as item}
         <IconAnimal id={item.id} image={item.image} name={item.name} on:delete={deleteAnimal}/>
         {/each}

@@ -13,11 +13,12 @@
 	let cardId = id;
 </script>
 
-<div class="container mx-auto flex items-center justify-between">
-	<div>
-	<img style="border-radius: 10px;" src={image} alt="">
-	<a href="/cards/{cardId}"><span style="font-size: 32px;">
-		{#if id < 10}
+<div class="container mx-auto grid grid-cols-6">
+	<div class="col-start-2 col-end-6">
+	<img style="border-radius: 10px; width:480px" src={image} alt="" />
+	<a href="/cards/{cardId}">
+		<span style="font-size: 32px;">
+		{#if id <= 10}
 			00{id}	
 		{/if}
 		{#if id >= 10}
@@ -26,15 +27,19 @@
 		{#if id >=100}
 			{id}
 		{/if}
-	</span>
-	<div class=" con display: flex" style="gap:59px">
+	</span></a>
+	</div>
+	<div class="col-start-2 col-end-6" style="display:flex; justify-content: space-between">
+		<div style="font-size: 32px;">
+			<a href="/cards/{cardId}">{name}</a>
+		</div>
 		{#if $isAuth}
-			<span style="font-size: 32px;">
-				{name}
-			</span>
-			<ChangeButton>Ред.</ChangeButton>
+		<div style="display:flex; gap: 25px;">
+			<a href="/cards/{cardId}"><ChangeButton>Ред.</ChangeButton></a>
 			<DelButton on:click={dispatch('delete', {id})}>Удал.</DelButton>
+		</div>
 		{/if}
+		</div>
 	</div>
-	</div>
-	</div>
+
+

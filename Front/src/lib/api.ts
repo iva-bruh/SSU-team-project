@@ -19,6 +19,10 @@ async function getAnimals(): Promise<Array<ItemAnimal>>{
     return res.data;
 }
 
+async function changeAnimal(dto: ItemAnimal, id: number): Promise<Array<ItemAnimal>>{
+    return await axios.post(`${baseURL}/animals/${id}`, dto)
+}
+
 async function createAnimal(dto: ItemAnimal){
     return await axios.post(`${baseURL}/animals`, dto)
 }
@@ -36,7 +40,8 @@ async function getAnimalByID(id: number): Promise<Array<ItemAnimal>>{
 
 export const ApiModule = {
     getAnimals,
-    createAnimal,
+    changeAnimal,
     deleteAnimal,
-    getAnimalByID
+    getAnimalByID,
+    createAnimal
 }
