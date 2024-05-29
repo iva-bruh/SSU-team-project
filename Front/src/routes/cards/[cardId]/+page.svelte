@@ -9,7 +9,7 @@
     const cardId = $page.params.cardId
 
     export let data;
-	$: animals = data.animals;
+	$: animal = data.animal;
 
     async function ChangeAnimal(event){
         await ApiModule.changeAnimal({
@@ -41,15 +41,15 @@
     // }
 </script>
 
-{#each animals as item }
+<!-- {#each animals as item } -->
 <!-- {#if item.id === cardId} -->
     {#if $isAuth}
-    <AnimalCardChange id={item.id} on:add={ChangeAnimal}/>
+    <AnimalCardChange id={animal.id} on:add={ChangeAnimal}/>
     {:else}
-    <AnimalCard id={item.id} image={item.image} type={item.type} name={item.name} sex={item.sex} age={item.age} breed={item.breed} story={item.story} about={item.about}/>
+    <AnimalCard id={animal.id} image={animal.image} type={animal.type} name={animal.name} sex={animal.sex} age={animal.age} breed={animal.breed} story={animal.story} about={animal.about}/>
     {/if}
 <!-- {/if} -->
-{/each}
+<!-- {/each} -->
 
 <!-- <span>{cardId}</span> -->
 

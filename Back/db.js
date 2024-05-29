@@ -18,14 +18,14 @@ export async function createAnimal({image, type, name, sex, age, breed, story, a
     `, [image, type, name, sex, age, breed, story, about])
 }
 
-export async function changeAnimal({image, type, name, sex, age, breed, story, about}){
+export async function changeAnimal({id, image, type, name, sex, age, breed, story, about}){
     return await client.query(`
     UPDATE animals
-    SET (image=$1, type=$2, name=$3, sex=$4, age=$5, breed=$6, story=$7, about=$8)
+    SET (image=$2, type=$3, name=$4, sex=$5, age=$6, breed=$7, story=$8, about=$9)
+    WHERE id = $1
     RETURNING *
-    `, [image, type, name, sex, age, breed, story, about]
-    `WHERE id = $1
-    `, [id])
+    `, [id, image, type, name, sex, age, breed, story, about]
+)
 }
 
 
@@ -38,6 +38,13 @@ export async function getAllAnimals(){
 export async function deleteAnimal(id){
     return await client.query(`
     DELETE FROM animals
+    WHERE id = $1
+    `, [id])
+}
+
+export async function getAllAnimalById(id){
+    return await client.query(`
+    SELECT * FROM animals
     WHERE id = $1
     `, [id])
 }
