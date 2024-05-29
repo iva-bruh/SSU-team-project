@@ -3,13 +3,13 @@
     import HelpButton from "../commons/HelpButton.svelte";
 </script>
 
-<div style="margin-top: 150px; background: #51C9C2;height: 206px; position: relative; width: 100vw; text-align: center;;">
+<div style="margin-top: 87px; background: #51C9C2;height: 206px; position: relative; width: 100vw; text-align: center;;">
     <span style="font-size:32px;">Помощь приюту</span>
     <HelpButton/>
 </div>
 
 <div class="container mx-auto grid grid-cols-12">
-    <div class="col-start-1 col-end-6" style="margin-top: 135px;">
+    <div class="col-start-1 col-end-6" style="margin-top: 131px;">
         <img src="images/кошка глав.png" alt="">
     </div> 
     <div class="help_text col-start-7 col-end-13" style="margin-top: 122px;">
@@ -18,10 +18,11 @@
     - Безопасные игрушки
     - Домики и другие конструкции для удобства животных
     - Миски, лотки
-    - Базовые лекарства для профилактики, витамины
-Большое спасибо!</span>
+    - Базовые лекарства для профилактики, витамины</span>
+        <span style="color: #FF4593">Большое спасибо!</span> 
     </div>
-    <div class="col-start-2" style="margin-top: 150px; background: #51C9C2;height: 80px; width: 934px; text-align: center; border-radius: 50px;">
+    <div class="col-start-2  col-end-12" style="display: flex; align-items: center; justify-content: center; 
+    margin-top: 182px; background: #51C9C2; height: 80px; text-align: center; border-radius: 50px;">
         <span style="font-size:32px;">Помогайте животным! Делайте мир лучше!</span>
     </div> 
     <div class="pictures col-start-1 col-end-4">
@@ -48,6 +49,5 @@
         white-space: pre-wrap;
         font-size: 32px;
         margin: 0 0 50px 0;
-        
     }
 </style>

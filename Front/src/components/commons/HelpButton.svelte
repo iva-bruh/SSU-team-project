@@ -1,8 +1,6 @@
 <button class="button arrow1"></button>
 
 <style>
-    
-
 .arrow1:after {
     position: absolute;
     top: 130px;

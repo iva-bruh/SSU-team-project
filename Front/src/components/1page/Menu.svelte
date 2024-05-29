@@ -13,7 +13,6 @@
         </div>
     </div>
 
-
     <div class="kib col-start-5 col-end-9 my-24 mr-5">
         <img style="width: 100%; height: 415px; " src="images/хаски.png" alt="">
     </div>

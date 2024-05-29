@@ -16,8 +16,6 @@
     </div>
 </div>
 
-
-
 <style>
     .slong{
     margin-top:265px;
