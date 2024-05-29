@@ -11,7 +11,7 @@
     async function createAnimal(){
         await ApiModule.createAnimal({
             image: '/images/noimage.png',
-            name: null
+            name: "name:"
         });
         invalidate('refresh');
     }
@@ -31,7 +31,7 @@
     </div>
     <div>
         {#each animals as item}
-        <IconAnimal id={item.id} image={item.image} on:delete={deleteAnimal}/>
+        <IconAnimal id={item.id} image={item.image} name={item.name} on:delete={deleteAnimal}/>
         {/each}
     </div>
 </div>

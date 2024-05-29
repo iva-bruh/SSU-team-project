@@ -1,18 +1,21 @@
 <script>
 	export let id;
 	export let image;
+	export let name;
 
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 	
 	import { isAuth } from "../../stores/auth";
-	import ChangeButton from "../commons/ChangeButton.svelte";
+	import ChangeButton from '../commons/ChangeButton.svelte';
 	import DelButton from "../commons/DelButton.svelte";
 
 	let cardId = id;
 </script>
 
-<div>
+
+<div class="container mx-auto flex items-center justify-between">
+	<div>
 	<img style="border-radius: 10px;" src={image} alt="">
 	<a href="/cards/{cardId}"><span style="font-size: 32px;">
 		{#if id < 10}
@@ -24,9 +27,15 @@
 		{#if id >=100}
 			{id}
 		{/if}
-	</span></a>
-</div>
-{#if $isAuth}
-    <a href="/cards/{cardId}"><ChangeButton>Ред.</ChangeButton></a>
-    <DelButton on:click={dispatch('delete', {id})}>Удал.</DelButton>
-{/if}
+	</span>
+	<div class=" con display: flex" style="gap:59px">
+		{#if $isAuth}
+			<span style="font-size: 32px;">
+				{name}
+			</span>
+			<ChangeButton>Ред.</ChangeButton>
+			<DelButton on:click={dispatch('delete', {id})}>Удал.</DelButton>
+		{/if}
+	</div>
+	</div>
+	</div>
